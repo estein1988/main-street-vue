@@ -1,0 +1,20 @@
+{
+    "dogs": [
+        {
+            "id": 1,
+            "name": "Spud",
+            "description": "A real good boy",
+            "imageURL": "https://www.rd.com/wp-content/uploads/2019/01/shutterstock_673465372.jpg"
+        },{
+            "id": 2,
+            "name": "McKenzie",
+            "description": "Fun friend",
+            "imageURL": "https://i.guim.co.uk/img/media/20098ae982d6b3ba4d70ede3ef9b8f79ab1205ce/0_0_969_581/master/969.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=a368f449b1cc1f37412c07a1bd901fb5"
+        },{
+            "id": 3,
+            "name": "Rocket",
+            "description": "Lots of energy",
+            "imageURL": "http://cdn.akc.org/content/article-body-image/lab_puppy_dog_pictures.jpg"
+        }
+    ]
+}
