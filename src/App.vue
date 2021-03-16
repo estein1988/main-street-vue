@@ -13,6 +13,11 @@
         <DogCard :dog="dog"/>
       </li>
     </ul>
+    <ul class="chars">
+      <li v-for="char in chars" :key="char.id">
+        <MortyCard :char="char"/>
+      </li>
+    </ul>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -23,17 +28,24 @@
 
 <script>
 import DogCard from "@/components/DogCard"
+import MortyCard from "@/components/MortyCard"
+
   export default {
     components: {
       DogCard,
+      MortyCard
     },
     computed: {
       dogs() {
         return this.$store.state.dogs
+      },
+      chars() {
+        return this.$store.state.chars
       }
     },
     mounted(){
       this.$store.dispatch("fetchDogs")
+      this.$store.dispatch("fetchChars")
     },
     methods: {
       addBuddy(event){
