@@ -1,9 +1,8 @@
 <template>
-    <div class="morty-card">
-        <img :src="char.image" :alt="char.image">
+    <div class="business-card">
+        <!-- <img :src="dog.imageURL" :alt="dog.imageURL"> -->
         <section>
-        <h2>{{char.name}}</h2>
-        <p>{{char.species}}</p>
+            <p>{{business.email}}</p>
         </section>
     </div>
 </template>
@@ -11,13 +10,13 @@
 <script>
 export default {
     props: {
-        char: Object,
+        business: Object,
     }
 }
 </script>
 
 <style lang="scss">
-.morty-card {
+.business-card {
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 1rem;

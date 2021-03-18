@@ -5,34 +5,34 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    dogs: [],
-    chars: []
+    businesses: [],
+    financials: []
   },
   mutations: {
-    setDogs(state, dogs){
-      state.dogs = dogs
+    setBusinesses(state, businesses){
+      state.businesses = businesses
     },
-    addDog(state, dog){
-      state.dogs = [...state.dogs, dog]
-    },
-    setChars(state, chars){
-      state.chars = chars
+    setFinancials(state, financials){
+      state.financials = financials
     }
+    // addDog(state, dog){
+    //   state.dogs = [...state.dogs, dog]
+    // },
   },
   actions: {
-    fetchDogs({commit}){
-      fetch("./dogs.json")
+    fetchBusinesses({commit}){
+      fetch('http://localhost:3000/businesses')
         .then(response => response.json())
-        .then(response => commit("setDogs", response.dogs))
+        .then(result => commit("setBusinesses", result))
     },
-    fetchChars({commit}){
-      fetch("https://rickandmortyapi.com/api/character/")
+    fetchFinancials({commit}){
+      fetch("http://localhost:3000/financials")
         .then(response => response.json())
-        .then(response => commit("setChars", response.results))
+        .then(result => commit("setFinancials", result))
     },
-    addDog({commit}, dog){
-      commit("addDog", dog)
-    }
+    // addDog({commit}, dog){
+    //   commit("addDog", dog)
+    // }
   },
   modules: {
   }
