@@ -7,26 +7,26 @@
       <input name="imageURL" placeholder="Image URL" />
       <input type="submit" value="Add Buddy" />
     </form> -->
-    <ul class="dogs">
+    <div v-for="business in businesses" :key="business.id">
+      <SearchFilter :business="business"/>
+    </div>
+    <ul class="businesses">
       <li v-for="business in businesses" :key="business.id">
         <BusinessCard :business="business"/>
       </li>
     </ul>
-    <!--  <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link>
-          </div>
-          <router-view/> -->
   </div>
 </template>
 
 <script>
 import BusinessCard from "@/components/BusinessCard"
+import SearchFilter from "@/components/SearchFilter"
 
   export default {
 
     components: {
-      BusinessCard
+      BusinessCard, 
+      SearchFilter
     },
 
     computed: {

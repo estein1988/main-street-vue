@@ -1,9 +1,12 @@
 <template>
+    <div>
     <div class="business-card">
-        <!-- <img :src="dog.imageURL" :alt="dog.imageURL"> -->
         <section>
             <p>{{business.email}}</p>
+            <p>{{business.business_name}}</p>
+        <!-- <img :src="business.imageURL" :alt="business.imageURL"> -->
         </section>
+    </div>
     </div>
 </template>
 
